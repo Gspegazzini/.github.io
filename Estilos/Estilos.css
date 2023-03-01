@@ -1,0 +1,370 @@
+/*General------------------------------------------------------------------------------------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Ubuntu', 'Roboto', sans-serif;
+}
+
+.header_cv {
+    grid-area: header_cv;
+}
+
+.detalle_cv {
+    grid-area: detalle_cv;
+}
+
+.aside_cv {
+    grid-area: aside_cv;
+}
+
+.footer_cv {
+    grid-area: footer_cv;
+}
+
+.visible_grid {
+    display: grid;
+    grid-template-areas:
+        "header_cv  header_cv"
+        "aside_cv   detalle_cv"
+        "footer_cv  footer_cv";
+    grid-template-columns: 400px 1fr;
+}
+
+@media only screen and (max-width: 1420px) {
+    .visible_grid {
+        display: grid;
+        grid-template-areas:
+            "header_cv"
+            "detalle_cv"
+            "aside_cv"
+            "footer_cv";
+        grid-template-columns: 98vw;
+    }
+    
+}
+
+.oculto {
+    display: none
+}
+
+.visible {
+    display: block
+}
+
+.detalle_cv {
+    height: 100vh;
+}
+
+/*Caratula------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.Caratula {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../IMAGENES/fondo_section.jpg);
+    background-size: cover;
+}
+
+.li_caratula {
+    display: inline;
+    text-align: center;
+
+}
+
+.imagen_caratula {
+    grid-area: imagen_caratula;
+}
+
+.leyenda_caratula {
+    grid-area: leyenda;
+    text-align: center;
+    font-size: 20px;
+    background-color: rgba(240, 248, 255, 0.487);
+    padding: 0;
+    padding-top: 30px;
+}
+
+.divSiguiente_btn {
+    grid-area: Siguiente_btn;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.Siguiente_btn {
+    bottom: 10px;
+    font-size: 30px;
+    color: white;
+    border-radius: 5px;
+    background-color: rgb(252, 74, 74, 1);
+    padding: 5px;
+    font-weight: 600;
+}
+
+.Siguiente_btn:hover {
+    font-size: 34;
+    color: rgb(68, 35, 167);
+    text-decoration: underline;
+}
+
+.ul_caratula {
+    grid-area: ul_caratula;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.Caratula {
+    display: grid;
+    grid-template-areas:
+        "imagen_caratula"
+        "leyenda"
+        "Siguiente_btn"
+        "ul_caratula";
+}
+
+.Icono_caratula {
+    width: 70px;
+    margin-left: 5%;
+
+}
+
+.Icono_caratula:hover {
+    width: 80px;
+    padding: 12px;
+    background-color: #fff;
+    border-radius: 100px;
+    transition: 0.2s;
+}
+
+/*Header------------------------------------------------------------------------------------------------------------------------------------------*/
+
+header {
+    top: 0;
+    width: 100%;
+    background-image: url("../IMAGENES/fondo.jpg");
+    background-size: cover;
+    position: sticky;
+    color: rgb(225, 215, 235);
+}
+
+.li_nav {
+    display: inline;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+
+.a_li_nav {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+.navegador {
+    position: flex;
+    bottom: 10px;
+    right: 10px;
+}
+
+
+.ul_nav {
+    text-align: right;
+}
+
+
+.li_nav:hover {
+    background-color: rgb(181, 220, 232, 0.15);
+    border-radius: 5px;
+    font-size: 27px;
+}
+
+.nav_res {
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 1420px) {
+    .ul_nav {
+        display: none;
+    }
+
+    .navegador_m {
+        position: absolute;
+        top: 60px;
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    .visible_nav_div_res {
+        display: list-item;
+        position: fixed;
+        left: 2px;
+        top: 120px;
+    }
+
+    .nav_res {
+        display: list-item;
+        top: 10px;
+        right: 10px;
+        padding-top: 10px;
+        width: 50px;
+        height: 50px;
+        border: 0px;
+        background-color: transparent;
+    }
+
+    .linea {
+        border-top: 4px solid #fff;
+        margin: 4px 4px 1px 4px;
+        padding-top: 5px;
+        border-radius: 5px;
+    }
+
+    .nav_res:hover {
+        background-color: rgba(27, 213, 213, 0.337);
+    }
+
+    .nav_res:focus {
+        width: 50px;
+        height: 50px;
+    }
+
+    .nav_res:active {
+        width: 45px;
+        height: 45px;
+
+    }
+
+
+
+    .li_nav_res {
+        text-align: center;
+        list-style: none;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px solid #000;
+        display: inline-flex;
+
+    }
+
+    .a_li_nav_res {
+        text-decoration: none;
+        font-size: 4vh;
+        width: 98vw;
+        color: #fff;
+        font-weight: 700;
+    }
+
+    .ul_nav_res {
+        padding-left: 0px;
+        margin-left: 0px;
+        margin-right: 0;
+        background-image: url(../IMAGENES/fondo.jpg);
+        background-size: cover;
+    }
+
+
+    .header_cv {
+        display: list-item;
+    }
+
+}
+
+/*Section------------------------------------------------------------------------------------------------------------------------------------------*/
+section div h2 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 30px;
+    margin-bottom: 15px;
+    padding-top: 20px;
+}
+
+section div ul {
+    margin-left: 10px;
+}
+
+/*Aside------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.imagen_aside,
+.imagen_caratula {
+    width: 160px;
+    align-content: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border-radius: 100px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+
+}
+
+#mail_contacto {
+    color: white;
+}
+
+.aside_cv {
+    background-color: #343333;
+    color: #fff;
+    padding: 10px;
+    height: 100%;
+}
+
+aside h3 {
+    text-align: center;
+}
+
+/*Footer------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.li_footer {
+    display: inline;
+    margin: 10px;
+    text-align: center;
+}
+
+.ICONO_CONTACTO {
+    width: 2%;
+    text-align: center;
+    margin-left: 5%;
+}
+
+.footer_cv {
+    text-align: center;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    margin-bottom: 0;
+    width: 100%;
+    clear: both;
+    background-color: black;
+    color: white
+}
+
+.separador {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 1420px) {
+    footer {
+        position: relative;
+        bottom: 0;
+        width: 100%
+    }
+    .ICONO_CONTACTO {
+        width: 7%;
+        text-align: center;
+        margin-left: 3%;
+    }
+    
+
+    ;
+}
